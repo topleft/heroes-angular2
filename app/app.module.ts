@@ -5,30 +5,21 @@ import { AppComponent }  from './app.component';
 import { HeroDetailComponent }  from './hero-detail.component';
 import { HeroesComponent }  from './heroes.component';
 import { DashboardComponent }  from './dashboard.component';
-import { RouterModule }   from '@angular/router';
-
+import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: 'heroes',
-        component: HeroesComponent
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      }
-    ])
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
 })
+
 export class AppModule { }
